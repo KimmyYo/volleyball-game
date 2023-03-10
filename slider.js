@@ -1,9 +1,9 @@
+
+
+
 let slideIndex = 1;
 
-window.onload = (event) => {
-    console.log("page is fully loaded");
-    showSlides(slideIndex+1);
-};
+showSlides(slideIndex+1);
 
 
 
