@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VolleyBall Game</title>
+    <!-- <link rel="stylesheet" href="reset.css"> -->
+    <link rel="stylesheet" href="SCSS/layout.css">
+    <script src="slider.js"></script>
+   
+</head>
+<body>
+    <div class="header">
+        NSYSU 
+        <div id="volley-ball-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-ball-volleyball" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                <path d="M12 12a8 8 0 0 0 8 4"></path>
+                <path d="M7.5 13.5a12 12 0 0 0 8.5 6.5"></path>
+                <path d="M12 12a8 8 0 0 0 -7.464 4.928"></path>
+                <path d="M12.951 7.353a12 12 0 0 0 -9.88 4.111"></path>
+                <path d="M12 12a8 8 0 0 0 -.536 -8.928"></path>
+                <path d="M15.549 15.147a12 12 0 0 0 1.38 -10.611"></path>
+             </svg>
+        </div>
+        Volleyball 
+    </div>
+    <div class="main-part">
+        <!-- create form for inputing and formatting game result -->
+        <div class="game-input main-box">
+            <form >
+                <div id="game-result">
+                    <!-- win team result -->
+                    <div class="game-team">
+                        <!-- <div class="game-win">
+                            <h3>Win</h3>
+                        </div> -->
+                        <div class="game-department">
+                            <select>
+                                <option>資管</option>
+                                <option>企管</option>
+                                <option>應數</option>
+                                <option>電機</option>
+                                <option>生科</option>
+                            </select>
+                            
+                        </div>
+                        
+                        <div class="game-department">
+                            <select>
+                                <option>資管</option>
+                                <option>企管</option>
+                                <option>應數</option>
+                                <option>電機</option>
+                                <option>生科</option>
+                            </select>
+                        </div>
+                    
+                    </div>
+                    <!-- <div class="game-team">
+                        <div id="semi-column">v.s.</div>
+                    </div> -->
+                    <!-- lose team result -->
+                    <div class="game-team">
+                        <!-- <div class="game-lose">
+                            <h3>Lose</h3>
+                        </div> -->
+                    
+                        <div class="game-score">
+                            <input type="number" placeholder="25"/>
+                        </div>
+                        <div class="game-score">
+                            :
+                        </div>
+                        <div class="game-score">
+                            <input type="number" placeholder="25"/>
+                        </div>
+                    </div>
+
+                    <div class="game-team">
+                        <button type="submit">Submit</button>
+                    </div>
+
+            
+                </div>
+            </form>
+        </div>
+
+        <div class="game-board main-box" id="game-board">
+            <div class="board-slider fade">
+
+                <!-- today's game -->
+                <div class="slide">
+                    <div class="current-section">
+                        <div>Games</div>
+                    </div>
+                    <div class="today-game">
+                        <div class="team">
+                            <div class="icon">
+                                MIS
+                            </div>
+                            Team 1
+                        </div>
+                        <div class="team">
+                            <div class="icon">
+                                MIS
+                            </div>
+                            Team 2
+                        </div>
+                        <div class="team">
+                            <div class="icon">
+                                MIS
+                            </div>
+                            Team 3
+                        </div>
+                        <div class="team">
+                            <div class="icon">
+                                MIS
+                            </div>
+                            Team 3
+                        </div>
+                        <div class="team">
+                            <div class="icon">
+                                MIS
+                            </div>
+                            Team 3
+                        </div>
+                    
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="current-section">
+                        <div>Slides 2</div>
+                    </div>
+                    Slide 2
+                </div>
+                <div class="slide">
+                    <div class="current-section">
+                        <div>Slides 3</div>
+                    </div>
+                    Slide 3
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div id="home-icon" >
+            <a href="#game-board">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="30" height="30" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M5 12l-2 0l9 -9l9 9l-2 0"></path>
+                    <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path>
+                    <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"></path>
+                </svg>
+            </a>
+        </div>
+        <div id="add-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plus" width="30" height="30" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 5l0 14"></path>
+                <path d="M5 12l14 0"></path>
+             </svg>
+        </div>
+        <div id="login-icon" class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="30" height="30" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+                <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+             </svg>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</body>
+</html>
